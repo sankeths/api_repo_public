@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: "A uber supercool demo site that takes care of your uber cool demo.</br> For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">Hero</b> Sales Engineers.</br>\n    <img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\">\n"
+  description: "A uber supercool demo site that takes care of your uber cool demo for cool customer.</br> For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">Hero</b> Sales Engineers.</br>\n    <img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\">\n"
   version: 1.0.0
   title: Awesome Shopping Store v1.0.0
   termsOfService: https://smartbear.com
@@ -19,6 +19,7 @@ tags:
   description: Operations dependent on third party service.
 schemes:
 - http
+- https
 paths:
   /{type}/get_login/:
     get:
@@ -71,6 +72,20 @@ paths:
                   type: string
                   example: "Bangalore, India"
                   description: Users address
+        "403":
+          description: OK
+          schema:
+            xml:
+              name: Response
+              wrapped: false
+            type: array
+            items:
+              type: object
+              properties:
+                error:
+                  type: string
+                  example: Error
+                  description: Error
       security:
       - basic: []
   /{type}/get_products/:
