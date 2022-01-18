@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: "A uber supercool demo site that takes care of your uber cool demo for cool customer.</br> For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">Hero</b> Sales Engineers.</br>\n    <img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\">\n"
+  description: "A uber supercool demo site that takes care of your uber cool demo for super-cool customer.</br> For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">Hero</b> Sales Engineers.</br>\n    <img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\">\n"
   version: 1.0.0
   title: Awesome Shopping Store v1.0.0
   termsOfService: https://smartbear.com
