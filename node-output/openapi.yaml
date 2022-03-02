@@ -14,9 +14,14 @@
     "version" : "2.0.0"
   },
   "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/SMARTBEAR_APAC/awesome-shopping_store_api_design_smartbear/2.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
     "url" : "https://sanketh.io/shoppingcart"
   }, {
     "url" : "https://demo.sanketh.io"
+  }, {
+    "url" : "ttps://g1ospg832g.execute-api.us-east-2.amazonaws.com/qa"
   } ],
   "security" : [ {
     "basicAuth" : [ ]
@@ -248,5 +253,6 @@
         "scheme" : "basic"
       }
     }
-  }
+  },
+  "x-aws-api-id" : "g1ospg832g"
 }
