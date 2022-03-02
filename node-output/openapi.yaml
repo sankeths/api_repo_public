@@ -1,0 +1,252 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Awesome Shopping Store API Design - SMARTBEAR",
+    "description" : "A supercool demo site that takes care of your uber cool demo.</br> Nice one here ! For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">SMARTBEAR</b> Sales Engineers.</br>\n<img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\" >\n",
+    "termsOfService" : "http://smartbear.com",
+    "contact" : {
+      "email" : "sanketh.shanbhag@smartbear.com"
+    },
+    "license" : {
+      "name" : "Commercial License Available",
+      "url" : "http://smartbear.com"
+    },
+    "version" : "2.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://sanketh.io/shoppingcart"
+  }, {
+    "url" : "https://demo.sanketh.io"
+  } ],
+  "security" : [ {
+    "basicAuth" : [ ]
+  } ],
+  "tags" : [ {
+    "name" : "Internal calls",
+    "description" : "Operations available to regular development, integration, test teams."
+  }, {
+    "name" : "External calls",
+    "description" : "Operations dependent on third party service."
+  } ],
+  "paths" : {
+    "/shoppingcart/service_creditcard.php" : {
+      "post" : {
+        "tags" : [ "External calls" ],
+        "description" : "External Service to make Creditcard payments",
+        "requestBody" : {
+          "description" : "Creates a new employee in DB",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/MODELb21cbf"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/MODEL89392a"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/get_login.php" : {
+      "get" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Login to user account",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    },
+    "/api/post_order.php" : {
+      "post" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Get list of all orders for the user",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    },
+    "/api/get_orders.php" : {
+      "get" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Get list of all orders for the user",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    },
+    "/api/get_products.php" : {
+      "get" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Get list of all products",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    },
+    "/api/get_order.php" : {
+      "get" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Get order details",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "order_id",
+          "in" : "query",
+          "description" : "Order Id",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "MODELb21cbf" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "description" : "Order ID"
+          },
+          "action" : {
+            "type" : "string",
+            "description" : "placeOrdercc"
+          },
+          "cc_money" : {
+            "type" : "number",
+            "description" : "Order amount"
+          },
+          "cc_name" : {
+            "type" : "string",
+            "description" : "Cardholders name"
+          },
+          "cc_number" : {
+            "type" : "integer",
+            "description" : "cc number"
+          },
+          "cc_exp_mo" : {
+            "type" : "integer",
+            "description" : "cc expiry month"
+          },
+          "cc_exp_yr" : {
+            "type" : "integer",
+            "description" : "cc expiry year"
+          },
+          "cc_cvv" : {
+            "type" : "integer",
+            "description" : "cc expiry year"
+          }
+        }
+      },
+      "MODEL89392a" : {
+        "required" : [ "Reason", "Status", "Status Code" ],
+        "type" : "object",
+        "properties" : {
+          "Status" : {
+            "type" : "string",
+            "description" : "Status of transaction"
+          },
+          "Reason" : {
+            "type" : "string",
+            "description" : "Status Readon"
+          },
+          "Status Code" : {
+            "type" : "integer",
+            "description" : "Status code for the tramsaction"
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "basicAuth" : {
+        "type" : "http",
+        "scheme" : "basic"
+      }
+    }
+  }
+}
