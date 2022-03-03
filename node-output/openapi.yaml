@@ -21,7 +21,7 @@
   }, {
     "url" : "https://demo.sanketh.io"
   }, {
-    "url" : "https://g1ospg832g.execute-api.us-east-2.amazonaws.com/qa"
+    "url" : "https://fgx4asb4y3.execute-api.us-east-1.amazonaws.com/Dev"
   } ],
   "security" : [ {
     "basicAuth" : [ ]
