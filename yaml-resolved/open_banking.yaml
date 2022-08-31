@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.0",
   "info" : {
-    "title" : "Open Banking API v1.0",
+    "title" : "Open Banking API v2.0",
     "description" : "This an example of an Open Banking API. It is an interface to some common financial microservices.",
     "contact" : {
       "email" : "you@your-company.com"
@@ -10,10 +10,10 @@
       "name" : "Apache 2.0",
       "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version" : "1.0.0"
+    "version" : "2.0.0"
   },
   "servers" : [ {
-    "url" : "https://virtserver.swaggerhub.com/SMARTBEAR_APAC/Demo_3108_2/1.0.0",
+    "url" : "https://virtserver.swaggerhub.com/SMARTBEAR_APAC/Demo_3108_2/2.0.0",
     "description" : "SwaggerHub API Auto Mocking"
   } ],
   "paths" : {
