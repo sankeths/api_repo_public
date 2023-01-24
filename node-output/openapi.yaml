@@ -1,14 +1,14 @@
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "New Awesome Shopping Store API Design -SMARTBEAR",
+    "title" : "New v3 Awesome Shopping Store API Design -SMARTBEAR",
     "description" : "A supercool demo site that takes care of your uber cool demo.</br> Nice one here ! For exclusive use of <b style= \"font-family: Arial;font-size: 24px;color:#4278d2;\">SMARTBEAR</b> Sales Engineers.</br>\n<img src=\"https://raw.githubusercontent.com/sankeths/Swagger/master/awesomeShoppingStore.PNG\" alt=\"ShoppingCart\" >\n",
     "termsOfService" : "http://smartbear.com",
     "contact" : {
       "email" : "sanketh.shanbhag@smartbear.com"
     },
     "license" : {
-      "name" : "Commercial License Available & can be reused",
+      "name" : "Non Commercial License Available & can be reused",
       "url" : "http://smartbear.com"
     },
     "version" : "2.0.0"
@@ -34,7 +34,7 @@
     "description" : "Operations dependent on third party service."
   } ],
   "paths" : {
-    "/shoppingcart/service_creditcard.php" : {
+    "/service_creditcard.php" : {
       "post" : {
         "tags" : [ "External calls" ],
         "description" : "External Service to make Creditcard payments",
@@ -234,15 +234,18 @@
         "properties" : {
           "Status" : {
             "type" : "string",
-            "description" : "Status of transaction"
+            "description" : "Status of transaction",
+            "example" : "Order Not Approved"
           },
           "Reason" : {
             "type" : "string",
-            "description" : "Status Readon"
+            "description" : "Status Readonly",
+            "example" : "Not Approved"
           },
           "Status Code" : {
             "type" : "integer",
-            "description" : "Status code for the tramsaction"
+            "description" : "Status code for the transaction",
+            "example" : 100
           }
         }
       }
