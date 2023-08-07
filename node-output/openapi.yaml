@@ -22,6 +22,11 @@
     "url" : "https://demo.sanketh.io"
   }, {
     "url" : "https://fgx4asb4y3.execute-api.us-east-1.amazonaws.com/Dev"
+  }, {
+    "url" : "http://localhost/shoppingcart/"
+  }, {
+    "url" : "dev.com",
+    "description" : "dev"
   } ],
   "security" : [ {
     "basicAuth" : [ ]
@@ -75,7 +80,32 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : "json"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : { }
+          }
+        }
+      }
+    },
+    "/api/get_login2.php" : {
+      "get" : {
+        "tags" : [ "Internal calls" ],
+        "description" : "Login to user account",
+        "parameters" : [ {
+          "name" : "type",
+          "in" : "query",
+          "description" : "json or xml",
+          "required" : true,
+          "style" : "form",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "default" : "json"
           }
         } ],
         "responses" : {
@@ -98,7 +128,8 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : "json"
           }
         } ],
         "responses" : {
@@ -144,7 +175,8 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
-            "type" : "string"
+            "type" : "string",
+            "default" : "json"
           }
         } ],
         "responses" : {
